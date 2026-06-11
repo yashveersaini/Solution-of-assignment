@@ -27,31 +27,7 @@ Yes, Django signals run in the **same database transaction** as the caller by de
 Proof:
 A model instance is created inside `transaction.atomic()`. The signal executes successfully, but when the transaction is rolled back, the record is not saved in the database. This shows that the signal execution is part of the same transaction.
 
----
-
-## Project Structure
-
-django_signals_assignment/
-
-* manage.py
-* django_signals_assignment/
-
-  * settings.py
-  * urls.py
-  * wsgi.py
-* signals_app/
-
-  * apps.py
-  * models.py
-  * signals.py
-  * management/
-
-    * commands/
-
-      * run_tests.py
-
----
-
+--- 
 ## Requirements
 
 Install dependencies:
@@ -68,7 +44,7 @@ Django==5.0.6
 
 ---
 
-## How to Run
+# How to Run
 
 ### Apply Migrations
 
